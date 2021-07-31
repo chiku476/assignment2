@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href="css/style.css">
+    </head>
+<body>
+<h2>HTML Forms</h2>
+
+<form action="/" method="POST">
+  <label for="uname">username:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  
+  <button type="submit">Register</button>
+</form> 
+  <script > 
+    const successCallback=(position)=>{
+    console.log(position.coords.latitude);
+    console.log(position.coords.longitude);
+  };
+  const errorCallback=(error)=>{
+    console.log(error);
+  };  
+   navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
+  </script>
+</body>
+</html>
